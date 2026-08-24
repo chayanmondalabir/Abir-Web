@@ -1,1 +1,1 @@
-# Abir-Web
+A single-page portfolio built with vanilla HTML, CSS, and JavaScript — no frameworks, no build step. Features an animated network background, smooth scroll reveals, and sections for About, Skills, Education, Achievements, Publications, Projects, and YouTube videos. Styled with a clean white-and-grey design system and deployed via GitHub Pages.
