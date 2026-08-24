@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chayan Mondal Abir — Portfolio</title>
+<meta name="description" content="Portfolio of Chayan Mondal Abir — AI/ML Engineer & Software Developer." />
+<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+<!-- Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (data/labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ===================== CURSOR GLOW (decorative, desktop only via CSS) ===================== -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ===================== PRELOADER ===================== -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <span>&lt;</span><span class="pulse">/</span><span>&gt;</span>
+  </div>
+</div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">CM Abir</a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active-link" data-nav>Home</a>
+      <a href="#about" class="nav-link" data-nav>About</a>
+      <a href="#skills" class="nav-link" data-nav>Skills</a>
+      <a href="#education" class="nav-link" data-nav>Education</a>
+      <a href="#achievements" class="nav-link" data-nav>Achievements</a>
+      <a href="#publications" class="nav-link" data-nav>Publications</a>
+      <a href="#projects" class="nav-link" data-nav>Projects</a>
+      <a href="#contact" class="nav-link" data-nav>Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-small nav-cta">Let's Talk</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HOME / HERO ===================== -->
+<section class="hero" id="home">
+  <!-- <canvas id="neuralCanvas"></canvas> -->
+  <div id="neuralCanvas"></div>
+  <div class="hero-grid-overlay"></div>
+
+  <div class="hero-inner container">
+    <div class="hero-text reveal-up">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> AVAILABLE FOR OPPORTUNITIES</p>
+      <h1 class="hero-title">
+        Hey, I'm <span class="grad-text">Chayan Mondal Abir</span>
+      </h1>
+      <h2 class="hero-role">
+        <span id="typedText"></span><span class="cursor-blink">|</span>
+      </h2>
+      <p class="hero-desc">
+        I turn ideas into intelligent solutions through <strong>🧠Machine Learning</strong>, 
+        <strong>🤖Deep Learning</strong>, and <strong>👁️Computer Vision</strong> — exploring 
+        <strong>🖼️image</strong> and <strong>🎥video</strong> analysis, <strong>🔍Explainable AI</strong>, and 
+        practical applications of emerging AI technologies.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#about" class="btn btn-primary">
+        About Me <i data-lucide="arrow-down-right"></i>
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <!-- <a href="https://orcid.org/0009-0006-5519-8765" target="_blank" rel="noopener" aria-label="ORCID"><i data-lucide="orcid"></i></a> -->
+        <a href="https://orcid.org/0009-0006-5519-8765" target="_blank" rel="noopener" aria-label="ORCID"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=T4cJBk0AAAAJ&hl=en&authuser=2" target="_blank" rel="noopener" aria-label="Google Scholar"><i data-lucide="graduation-cap"></i></a>
+        <a href="https://github.com/chayanmondalabir" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+        <a href="https://www.linkedin.com/in/chayanmondalabir/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+        <a href="https://www.kaggle.com/chayanmondalabir" target="_blank" rel="noopener" aria-label="Kaggle"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M.1025 7.3475c-.0681 0-.1022.0341-.1022.102v6.752c0 .0681.034.1022.1022.1022h.7049c.068 0 .1022-.034.1022-.1023v-1.481l.4187-.3985 1.5016 1.91c.041.0477.0884.0716.143.0716h.9091c.0476 0 .0748-.0135.0817-.0407.0135-.041.0066-.075-.0206-.1023l-1.9816-2.4618 1.9002-1.8384c.0204-.0205.0237-.051.01-.092-.0137-.0339-.0408-.051-.0816-.051h-.9398c-.0477 0-.0953.024-.143.0716L.9096 11.607V7.4496c0-.0679-.0342-.102-.1022-.102zm18.0417 0c-.068 0-.102.0341-.102.102v6.752c0 .0681.034.102.102.102h.705c.068 0 .102-.034.102-.102v-6.752c0-.068-.034-.102-.102-.102zM5.961 9.6254c-.5653 0-1.11.1806-1.6343.5415-.0545.0545-.0648.102-.0307.143l.3676.5208c.0272.0477.0717.0545.133.0204.3948-.2722.783-.4086 1.1644-.4086.2927 0 .5158.0886.669.2656.1532.1771.2197.3917.1992.6436-.6606.0681-1.1545.1495-1.4813.245-.8308.2383-1.2461.6913-1.2461 1.3586 0 .4222.1533.7695.4598 1.0419.3132.2654.6845.3982 1.1134.3982.4698 0 .8545-.1125 1.1542-.3372v.1432c0 .0682.0374.102.1123.102h.7048c.068 0 .102-.0338.102-.102V11.372c0-.6604-.2245-1.1406-.6739-1.4403-.3065-.2043-.6776-.3063-1.1134-.3063zm4.3225 0c-.6742 0-1.195.2622-1.5627.7865-.3133.4359-.4699.9671-.4699 1.5936 0 .6604.1634 1.2087.4903 1.6444.3744.4972.892.7455 1.5526.7455.5313 0 .9567-.1327 1.2768-.3982v.531c0 .858-.4122 1.287-1.236 1.287-.361 0-.732-.1907-1.1132-.572a.098.098 0 00-.0716-.0306c-.034 0-.0613.0102-.0817.0307l-.4802.48c-.0408.0613-.0375.1124.0103.1532.1361.1157.2554.2129.3576.2911.102.0783.1905.1413.2656.189.354.1975.7284.2961 1.1235.2961.6808 0 1.207-.1925 1.5781-.577.3711-.3848.5567-.9484.5567-1.6903V9.8196c0-.068-.034-.102-.102-.102h-.705c-.0682 0-.1021.034-.1021.102v.2043c-.3471-.2657-.7763-.3985-1.287-.3985zm4.8021 0c-.6742 0-1.195.2622-1.5627.7865-.3132.4359-.4699.9671-.4699 1.5936 0 .6604.1633 1.2087.4903 1.6444.3744.4972.892.7455 1.5526.7455.5311 0 .9566-.1327 1.2768-.3982v.531c0 .858-.4122 1.287-1.236 1.287-.361 0-.732-.1907-1.1133-.572a.098.098 0 00-.0716-.0306c-.034 0-.0612.0102-.0816.0307l-.48.48c-.0409.0613-.0376.1124.01.1532.1363.1157.2555.2129.3576.2911.1021.0783.1906.1413.2657.189.354.1975.7285.2961 1.1237.2961.6808 0 1.2068-.1925 1.5781-.577.371-.3848.5565-.9484.5565-1.6903V9.8196c0-.068-.034-.102-.102-.102h-.7049c-.0682 0-.1022.034-.1022.102v.2043c-.3474-.2657-.7763-.3985-1.287-.3985zm6.7457 0c-.6537 0-1.185.211-1.5936.6332-.4427.4632-.664 1.0283-.664 1.6956 0 .7083.225 1.2905.6743 1.7467.463.463 1.042.6945 1.7366.6945.6467 0 1.2154-.1838 1.7057-.5515.0545-.041.0545-.0884 0-.143l-.4802-.4903c-.041-.0409-.0919-.0409-.1533 0-.2998.2112-.6368.3167-1.0112.3167-.4222 0-.7729-.119-1.052-.3576-.2452-.2248-.3882-.5038-.429-.8375h3.3197c.0679 0 .1022-.0341.1022-.1023l.01-.2244c.0341-.6878-.1668-1.26-.6025-1.7162-.4224-.4426-.9432-.664-1.5627-.664zm-.0206.7865c.3268 0 .6062.1056.8377.3166.2452.211.371.4734.378.7865h-2.4618c.0613-.3269.2077-.5925.4392-.7968.2313-.2042.5004-.3063.8069-.3063zm-11.4249.102c.6196 0 1.0146.2181 1.1848.6538v1.6854c-.1702.4358-.5755.6538-1.2155.6538-.3133 0-.5687-.0986-.7661-.2963-.2656-.2518-.3983-.6538-.3983-1.2053 0-.9941.3984-1.4914 1.1951-1.4914zm4.802 0c.6196 0 1.0148.2181 1.1851.6538h-.0002v1.6854c-.1703.4358-.5755.6538-1.2155.6538-.3132 0-.5686-.0986-.7661-.2963-.2655-.2518-.3983-.6538-.3983-1.2053 0-.9941.3983-1.4914 1.195-1.4914zm-8.3586 1.6547v1.0215c-.286.286-.6675.412-1.1441.3779-.1703-.0135-.32-.0663-.4493-.1582-.1294-.0919-.2045-.2129-.2249-.3627-.0341-.2657.1158-.47.4495-.6129.2452-.1088.7013-.1974 1.3688-.2656z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap reveal-up delay-1">
+      <div class="orbit-ring ring-1"></div>
+      <div class="orbit-ring ring-2"></div>
+      <div class="photo-glow"></div>
+      <img src="assets/images/profile-placeholder.jpg" alt="Chayan Mondal Abir" class="hero-photo" />
+      <div class="floating-chip chip-1"><i data-lucide="brain-circuit"></i> AI / ML</div>
+      <div class="floating-chip chip-2"><i data-lucide="code-2"></i> Computer-Vision</div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span>scroll</span>
+    <i data-lucide="chevron-down"></i>
+  </a>
+</section>
+
+<main>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Who I Am</p>
+    <h2 class="section-title reveal-up">About <span class="grad-text">Me</span></h2>
+
+    <div class="about-grid">
+      <div class="about-photo reveal-up">
+        <img src="assets/images/miaw.png" alt="Chayan Mondal Abir portrait" />
+        <div class="about-photo-frame"></div>
+      </div>
+
+      <div class="about-content reveal-up delay-1">
+        <h3>AI Engineer</h3>
+        <p>
+        I am currently pursuing an <strong>M.Tech in Computer Science and Engineering</strong>,
+        with a strong interest in <strong>Artificial Intelligence, Machine Learning,
+        Deep Learning, and Computer Vision</strong>. My work focuses on developing
+        intelligent systems that can learn from data, understand visual information,
+        and address real-world problems through practical AI solutions.
+        </p>
+        <p>
+        I am particularly interested in <strong>image and video analysis,
+        Explainable AI (XAI), and deep learning-based computer vision</strong>,
+        with a growing focus on building models that are not only accurate but also
+        interpretable and applicable to real-world scenarios. I enjoy exploring
+        research ideas, experimenting with modern AI techniques, and transforming
+        them into meaningful, data-driven solutions.
+        </p>
+
+        <div class="about-facts">
+          <div class="fact">
+            <i data-lucide="mail"></i>
+            <div>
+              <span class="fact-label">Email</span>
+              <a href="mailto:your.primary@email.com">abirchayan2000@email.com</a>
+              <a href="mailto:your.secondary@email.com">ca0163@srmist.edu.in</a>
+            </div>
+          </div>
+          <div class="fact">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <span class="fact-label">Location</span>
+              <span>Tamil Nadu, India - 603203</span>
+            </div>
+          </div>
+          <div class="fact">
+            <i data-lucide="graduation-cap"></i>
+            <div>
+              <span class="fact-label">Focus</span>
+              <span>AI / ML</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="YOUR_GOOGLE_DRIVE_LINK" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Resume <i data-lucide="external-link"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== SKILLS ===================== -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">What I Work With</p>
+    <h2 class="section-title reveal-up">Tech Stack &amp; <span class="grad-text">Skills</span></h2>
+
+    <div class="skills-grid">
+
+      <!-- Programming Languages -->
+      <div class="skill-card reveal-up">
+        <div class="skill-card-head">
+          <i data-lucide="terminal"></i>
+          <h3>Programming Languages</h3>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+                 class="tag-icon" alt="" />
+            C
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                 class="tag-icon" alt="" />
+            C++
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                 class="tag-icon" alt="" />
+            Java
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                 class="tag-icon" alt="" />
+            Python
+          </span>
+        </div>
+      </div>
+
+
+      <!-- Frontend Development -->
+      <div class="skill-card reveal-up delay-1">
+        <div class="skill-card-head">
+          <i data-lucide="layout-panel-left"></i>
+          <h3>Frontend Development</h3>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                 class="tag-icon" alt="" />
+            HTML5
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                 class="tag-icon" alt="" />
+            CSS3
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                 class="tag-icon" alt="" />
+            JavaScript
+          </span>
+        </div>
+      </div>
+
+
+      <!-- AI & Machine Learning -->
+      <div class="skill-card reveal-up delay-2">
+        <div class="skill-card-head">
+          <i data-lucide="brain-circuit"></i>
+          <h3>AI &amp; Machine Learning</h3>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                 class="tag-icon" alt="" />
+            TensorFlow
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg"
+                 class="tag-icon" alt="" />
+            PyTorch
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
+                 class="tag-icon" alt="" />
+            Pandas
+          </span>
+
+          <span class="tag">
+            <i data-lucide="chart-spline" class="tag-icon"></i>
+            Seaborn
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg"
+                 class="tag-icon" alt="" />
+            OpenCV
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+                 class="tag-icon" alt="" />
+            scikit-learn
+          </span>
+        </div>
+      </div>
+
+
+      <!-- Database -->
+      <div class="skill-card reveal-up">
+        <div class="skill-card-head">
+          <i data-lucide="database"></i>
+          <h3>Database</h3>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">
+            <i data-lucide="database" class="tag-icon"></i>
+            SQL
+          </span>
+        </div>
+      </div>
+
+
+      <!-- Software & Tools -->
+      <div class="skill-card reveal-up delay-1">
+        <div class="skill-card-head">
+          <i data-lucide="wrench"></i>
+          <h3>Software &amp; Tools</h3>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg"
+                 class="tag-icon" alt="" />
+            MATLAB
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                 class="tag-icon" alt="" />
+            Git
+          </span>
+
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"
+                 class="tag-icon" alt="" />
+            Arduino
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section class="section" id="education">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">How I Got Here</p>
+    <h2 class="section-title reveal-up">My <span class="grad-text">Education</span></h2>
+
+    <div class="timeline">
+
+      <!-- M.Tech -->
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot">
+          <i data-lucide="graduation-cap"></i>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-photo">
+            <img src="assets/images/mtech.jpg" alt="Your University Name campus" />
+          </div>
+
+          <div class="timeline-content">
+            <span class="badge">2025 — Present</span>
+            <h3>M.Tech, Computer Science &amp; Engineering</h3>
+            <p class="timeline-sub">SRM Institute of Science and Technology, Kattankulathur, Tamil Nadu, India.</p>
+            <p>Specialization / research focus goes here. CGPA: 8.78 / 10</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- B.Tech -->
+      <div class="timeline-item reveal-up delay-1">
+        <div class="timeline-dot">
+          <i data-lucide="graduation-cap"></i>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-content">
+            <span class="badge">2020 — 2024</span>
+            <h3>B.Tech, Electrical &amp; Electronics Engineering</h3>
+            <p class="timeline-sub">C. V. Raman Global University, Bhubaneswar, Odisha, India.</p>
+            <p>Relevant coursework, honors, or thesis title goes here. CGPA: 8.25 / 10</p>
+          </div>
+
+          <div class="timeline-photo">
+            <img src="assets/images/btech.webp" alt="Your College Name campus" />
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Higher Secondary -->
+      <div class="timeline-item reveal-up delay-2">
+        <div class="timeline-dot">
+          <i data-lucide="school"></i>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-photo">
+            <img src="assets/images/hsc.jpg" alt="Your School Name building" />
+          </div>
+
+          <div class="timeline-content">
+            <span class="badge">2017 — 2019</span>
+            <h3>Higher Secondary (Class XII)</h3>
+            <p class="timeline-sub">Govt. Majeed Memorial City College, Khulna, Bangladesh.</p>
+            <p>Science stream · Percentage / Grade: 88.84%</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Secondary -->
+      <div class="timeline-item reveal-up delay-3">
+        <div class="timeline-dot">
+          <i data-lucide="book-open"></i>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-content">
+            <span class="badge">2015 - 2017</span>
+            <h3>Secondary (Class X)</h3>
+            <p class="timeline-sub">Batiaghata Thana Head Quater's Pilot Model High School, Batiaghata, Bangladesh.</p>
+            <p>Percentage / Grade: 85.30%</p>
+          </div>
+
+          <div class="timeline-photo">
+            <img src="assets/images/ssc.webp" alt="Your School Name building" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACHIEVEMENTS ===================== -->
+<section class="section section-alt" id="achievements">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Recognition</p>
+    <h2 class="section-title reveal-up">Achievements</h2>
+
+    <div class="achieve-grid">
+      <div class="achieve-card reveal-up">
+        <i data-lucide="award"></i>
+        <h3>Scholarship</h3>
+        <div class="achieve-links">
+          <a href="https://drive.google.com/file/d/1CCbxhH_JJ6n1oetAOLG3RXV0nuzMX_TC/view?usp=sharing" target="_blank" rel="noopener">B.Tech(SII Scholar)</a>
+          <a href="https://drive.google.com/file/d/1sTNbs1H95q6aZv95rWXUiN6NeunhXva-/view?usp=sharing" target="_blank" rel="noopener">M.Tech(SII Scholar)</a>
+        </div>
+      </div>
+
+      <div class="achieve-card reveal-up delay-1">
+        <i data-lucide="presentation"></i>
+        <h3>Conference Acceptance</h3>
+        <div class="achieve-links">
+          <a href="https://drive.google.com/file/d/1cO3Cr3gA4AQ6FpwV-8bKXxaAG8A3n3TA/view?usp=drive_link" target="_blank" rel="noopener">Skin Cancer</a>
+          <a href="https://drive.google.com/file/d/1OIsAzPhK08M3aiqLub6BG35K-by2Vk6S/view?usp=drive_link" target="_blank" rel="noopener">Fish Disease</a>
+          <a href="https://drive.google.com/file/d/15brkhdW2-2M-dzZM3rIW_3URiIhFE_Tj/view?usp=drive_link" target="_blank" rel="noopener">Phishing Email</a>
+        </div>
+      </div>
+
+      <div class="achieve-card reveal-up delay-2">
+        <i data-lucide="badge-check"></i>
+        <h3>Certification</h3>
+        <div class="achieve-links">
+          <a href="https://drive.google.com/file/d/18_F1dwxT5V2C01htZpET9118zjUkPK0z/view?usp=sharing" target="_blank" rel="noopener">Cisco - Cyber Security</a>
+          <a href="https://drive.google.com/file/d/1jJ17gZlEE0ltGRau1UE_Up9ePrACKwhe/view?usp=sharing" target="_blank" rel="noopener">Smartknower - (ES)</a>
+          <a href="https://drive.google.com/file/d/1I_VqQwq81_Ywcr3-lfUIkXK9KGCACKF-/view?usp=sharing" target="_blank" rel="noopener">NPTEL - DBMS</a>
+        </div>
+      </div>
+
+      <div class="achieve-card reveal-up delay-1">
+        <i data-lucide="sparkles"></i>
+        <h3>Others</h3>
+        <div class="achieve-links">
+          <a href="https://drive.google.com/file/d/1hHM-2LXipk40KRhvHFaE8YhnAfPNxT6J/view?usp=sharing" target="_blank" rel="noopener">Lexicon</a>
+          <a href="https://drive.google.com/file/d/1hLJlFhu90YSzliLKHMvb4dAzGzooJJuF/view?usp=sharing" target="_blank" rel="noopener">Math Olympaiad</a>
+          <a href="https://drive.google.com/file/d/1XXjor7iRsomlcC5E8QiohoCa-_g7etx6/view?usp=sharing" target="_blank" rel="noopener">Scouts</a>
+          <a href="https://drive.google.com/file/d/1Bpjicaz7KBNK_au59GDoiMcnRRCaI6xA/view?usp=sharing" target="_blank" rel="noopener">Technical Edu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PUBLICATIONS ===================== -->
+<section class="section" id="publications">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Research</p>
+    <h2 class="section-title reveal-up">Publications</h2>
+
+    <div class="pub-list">
+
+      <article class="pub-card reveal-up">
+        <div class="pub-photo"><img src="assets/images/eprime.jpg" alt="Transformer condition monitoring figure" /></div>
+        <div class="pub-content">
+          <span class="pub-tag pub-tag-journal">JOURNAL</span>
+          <h3>A novel infrared thermography image analysis for transformer condition monitoring</h3>
+          <p class="pub-authors">Rupali Balabantaraya, Ashwin Kumar Sahoo, Prabodh Kumar Sahoo, Chayan Mondal Abir, Manoj Kumar Panda</p>
+          <p class="pub-meta">DOI: 10.1016/j.prime.2024.100758 · e-Prime - Advances in Electrical Engineering, Electronics and Energy · 2024</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1016/j.prime.2024.100758" target="_blank" rel="noopener" class="pub-btn"><i data-lucide="file-text"></i> Read Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub-card reveal-up delay-1">
+        <div class="pub-photo"><img src="assets/images/ijscai.jpg" alt="Fish disease diagnosis using deep CNN architectures" /></div>
+        <div class="pub-content">
+          <span class="pub-tag pub-tag-journal">JOURNAL</span>
+          <h3>A Comparative Analysis of Deep CNN Architectures for Automated Fish Disease Diagnosis in Aquaculture</h3>
+          <p class="pub-authors">Chayan Mondal Abir, Madhumitha Kulandaivel</p>
+          <p class="pub-meta">International Journal of Soft Computing And Artificial Intelligence (IJSCAI) · Volume 13, Issue 2 · November 2025</p>
+          <div class="pub-links">
+            <a href="http://iraj.in/journal/IJSCAI//paper_detail.php?paper_id=22341&nameA_Comparative_Analysis_of_Deep_CNN_Architectures_for_Automated_Fish_Disease_Diagnosis_in_Aquaculture" target="_blank" rel="noopener" class="pub-btn"><i data-lucide="file-text"></i> Read Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub-card reveal-up delay-1">
+        <div class="pub-content">
+          <span class="pub-tag pub-tag-conf">CONFERENCE</span>
+          <h3>Enhanced AlexNet Model for Improved Skin Cancer Detection: A Novel Approach</h3>
+          <p class="pub-authors">Subir Biswas, Md Ariful Islam, Chayan Mondal Abir, Debendra Muduli</p>
+          <p class="pub-meta">DOI: 10.1007/978-981-97-7946-8_22 · Proceedings of International Conference on Paradigms of Communication, Computing and Data Analytics · PCCDA 2024, Volume 1 · 2025</p>
+          <div class="pub-links">
+            <a href="http://dx.doi.org/10.1007/978-981-97-7946-8_22" target="_blank" rel="noopener" class="pub-btn"><i data-lucide="file-text"></i> Read Paper</a>
+          </div>
+        </div>
+        <div class="pub-photo"><img src="assets/images/pccda.webp" alt="Conference paper figure" /></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Selected Work</p>
+    <h2 class="section-title reveal-up">Projects</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card reveal-up">
+        <div class="project-img"><img src="assets/images/phishing.jpg" alt="Project One" /></div>
+        <div class="project-body">
+          <h3>Phishing Email Detection</h3>
+          <p>A Framework for Phishing Email Detection with Statistical Text Representation and Semantic Feature Analysis.</p>
+          <div class="tag-row small">
+            <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">NLP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chayanmondalabir/Phishing-Email-Detection" target="_blank"><i data-lucide="github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal-up delay-1">
+        <div class="project-img"><img src="assets/images/Brain.jpg" alt="Project Two" /></div>
+        <div class="project-body">
+          <h3>Brain Tumor Detection</h3>
+          <p>Parallel Deep Feature Extraction Using MobileNetV2, VGG16, and DenseNet121 with SVM Fusion for Brain Tumor Classification.</p>
+          <div class="tag-row small">
+            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Scikit-learn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chayanmondalabir/Brain-Tumor-Parallel" target="_blank"><i data-lucide="github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal-up delay-2">
+        <div class="project-img"><img src="assets/images/fish.jpg" alt="Project Three" /></div>
+        <div class="project-body">
+          <h3>Fish Disease Diagnosis</h3>
+          <p>Comparative Deep CNN Architectures for Automated Fish Disease Diagnosis in Aquaculture.</p>
+          <div class="tag-row small">
+            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Scikit-learn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/chayanmondalabir/Fish-Disease-Diagnosis" target="_blank"><i data-lucide="github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section" id="contact">
+  <div class="container">
+    <p class="section-eyebrow reveal-up">Get In Touch</p>
+    <h2 class="section-title reveal-up">Let's Build Something <span class="grad-text">Together</span></h2>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal-up">
+        <p>
+          Have a project, research idea, or opportunity in mind? My inbox is always open —
+          I try to reply within a day or two.
+        </p>
+        <div class="fact"><i data-lucide="mail"></i><div><span class="fact-label">Email</span><a href="mailto:you@example.com">abirchayan2000@example.com</a></div></div>
+        <div class="fact"><i data-lucide="phone"></i><div><span class="fact-label">Phone</span><span>+91 877 781 8965</span></div></div>
+        <div class="fact"><i data-lucide="map-pin"></i><div><span class="fact-label">Location</span><span>Tamil Nadu, India - 603203</span></div></div>
+
+      </div>
+
+      <form class="contact-form reveal-up delay-1" id="contactForm" action="https://formsubmit.co/abirchayan2000@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from portfolio site" />
+        <input type="hidden" name="_captcha" value="false" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="your name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or idea..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Send Message <i data-lucide="send"></i></button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <a href="#home" class="logo">CM Abir</a>
+      <p>Thank you for visiting my portfolio.<br>Let's connect, exchange ideas, and build something impactful together.🚀</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Elsewhere</h4>
+      <a href="https://orcid.org/0009-0006-5519-8765" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=T4cJBk0AAAAJ&hl=en&authuser=2" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://github.com/chayanmondalabir" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/chayanmondalabir/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.kaggle.com/chayanmondalabir" target="_blank" rel="noopener">Kaggle</a>
+      <a href="https://www.youtube.com/@ghostlaneplays" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Chayan Mondal Abir. All rights reserved.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+<!-- Lucide icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<!-- Vanta.js NET background (hero section) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
