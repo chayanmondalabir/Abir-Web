@@ -755,6 +755,36 @@ h1, h2, h3, h4 {
   .pub-photo { width: 100%; height: 180px; }
 }
 
+
+.pub-subheading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 900px;
+  margin: 48px auto 20px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dimmer);
+}
+.pub-subheading::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+.pub-simple-list { display: flex; flex-direction: column; gap: 12px; max-width: 900px; margin: 0 auto; }
+.pub-simple {
+  padding: 18px 22px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  transition: var(--transition);
+}
+.pub-simple:hover { border-color: var(--secondary); border-style: solid; }
+.pub-simple .pub-tag { margin-bottom: 10px; }
+.pub-simple .pub-meta { margin-bottom: 0; }
+.pub-simple h4 { font-size: 0.98rem; font-weight: 600; color: var(--text); margin-bottom: 6px; line-height: 1.5; }
+.pub-simple .pub-authors { margin-bottom: 0; }
+
+
 /* ==========================================================================
    PROJECTS
    ========================================================================== */
